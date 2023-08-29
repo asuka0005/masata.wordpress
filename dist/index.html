@@ -16,16 +16,54 @@
   <meta property="og:site_name" content="" />
   <meta property="og:description" content="" />
   <!-- ファビコン -->
-  <link rel="icon" href="" />
+  <link rel="icon" href="#"/>
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
+
 <body>
-  <div class="l-inner">
-    <p class="p-test">ccccocomateだよ\(^o^)/</p>
-  </div>
+  <header class="p-header l-header js-header">
+    <div class="p-header__inner">
+      <h1 class="p-header__logo c-main-logo">
+        <a href="#">
+          <img src="./images/common/header-icon.png" alt="ロゴ">
+        </a>
+      </h1>
+      <!-- ドロワーメニュー -->
+      <div class="p-header__hamburger-btn js-hamburger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- ドロワーメニュー ここまで-->
+      <nav class="p-header__nav p-nav js-drawer">
+        <ul class="p-header__nav-items p-nav__items">
+          <li class="p-header__nav-item p-nav__item">
+            <a href="#">TOP</a>
+          </li>
+          <li class="p-header__nav-item p-nav__item">
+            <a href="#">ABOUT</a>
+          </li>
+          <li class="p-header__nav-item p-nav__item">
+            <a href="#">SERVICE</a>
+          </li>
+          <li class="p-header__nav-item p-nav__item">
+            <a href="#">WORKS</a>
+          </li>
+          <li class="p-header__nav-item p-nav__item">
+            <a href="#">NEWS</a>
+          </li>
+          <li>
+            <a href="#" class="p-header__button c-button c-button__arrow c-button__arrow--header">
+              CONTACT
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 </body>
 </html>
