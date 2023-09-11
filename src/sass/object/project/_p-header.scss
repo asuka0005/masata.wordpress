@@ -55,21 +55,18 @@
 }
 
 .p-header__nav-item {
-  // padding: rem(30) 0;
-  @include mq(md) {
-    padding: 0 rem(16);
-
-  }
+  padding-right: rem(50);
 }
 
 
 .p-header__button {
-  letter-spacing: 0.04em;
-  border-radius: rem(30);
-  padding:  rem(16) rem(59) rem(16) rem(45);
+  // letter-spacing: 0.04em;
+  // border-radius: rem(30);
+  padding:  rem(31) rem(59) rem(30) rem(45);
+  background-color: $navy;
+  line-height: calc(19 / 16);
   @include mq(md) {
     // padding: rem(16) rem(45);
-    line-height: calc(23 / 16);
     
   }
 }
