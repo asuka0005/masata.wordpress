@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.p-nav {
+  height: inherit;
+}
+
+.p-nav__items {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  font-family: $font-hf;
+  @include mq(md) {
+    flex-direction: column;
+
+  }
+}
+
+.p-nav__item {
+  height: inherit;
+  line-height: calc(19 / 16);
+}
+
+.p-nav__item a {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+// .p-nav__item a:hover {
+//   opacity: initial;
+// }
+
+// .p-nav__item a::after {
+//   @include mq(md) {
+//     content: "";
+//     width: calc(100% - #{rem(16)} * 2);
+//     //100% →padding含めた幅 - 左右のpadding
+//     height: 2px;
+//     position: absolute;
+//     bottom: rem(30);
+//     transform: scaleX(0);
+//     transition: .3s;
+//   }
+// }
+
+// .p-nav__item a:hover::after {
+//   @include mq(md) {
+//     transform: scaleX(1);
+//   }
+// }
+
+
+// .p-nav__item--footer {
+//   @include mq(md) {
+//     padding: 0 rem(16);
+//   }
+// }
+
+// .p-nav__item--footer:first-child {
+//   @include mq(md) {
+//     padding-left: 0;
+//   }
+// }
+
+// .p-nav__item--footer:last-child {
+//   @include mq(md) {
+//     padding-right: 0;
+//   }
+// }
+
+// .p-nav__item--footer a::after {
+//   bottom: rem(-12);
+// }

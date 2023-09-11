@@ -35,4 +35,15 @@ jQuery(function ($) {
     return false;
   });
 
+  // ハンバーガーメニュー
+  $('.js-hamburger-btn').click(function () {
+    $(this).toggleClass('open');
+    if($(this).hasClass('open')){
+      $('.js-drawer').fadeIn();
+    }else{
+      $('.js-drawer').fadeOut();
+    }
+  })
+
+
 });

@@ -1,0 +1,158 @@
+@use "global" as *;
+
+
+.p-header {
+  background-color: red;
+  height: rem(80);
+  @include mq(md) {
+  }
+}
+
+.p-header__inner {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: inherit;
+  @include mq(md) {
+    // justify-content: space-around;
+  }
+}
+
+.p-header__logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+}
+
+.p-header__logo a {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  
+}
+
+.p-header__nav {
+  margin-left: auto;
+  @include mq(md) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    height: 100vh;
+    padding-top: rem(200);
+
+  }
+
+  @include mq(md) {
+    display: none;
+    position: static;
+    width: initial;
+    background-color: initial;
+    padding-top: 0;
+  }
+}
+
+.p-header__nav-item {
+  // padding: rem(30) 0;
+  @include mq(md) {
+    padding: 0 rem(16);
+
+  }
+}
+
+
+.p-header__button {
+  letter-spacing: 0.04em;
+  border-radius: rem(30);
+  padding:  rem(16) rem(59) rem(16) rem(45);
+  @include mq(md) {
+    // padding: rem(16) rem(45);
+    line-height: calc(23 / 16);
+    
+  }
+}
+
+
+.p-header__hamburger-btn {
+  display: none;
+  margin-left: auto;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  z-index: 1000;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+
+.p-header__hamburger-btn span {
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: $black;
+}
+
+.p-header__hamburger-btn,.p-header__hamburger-btn span {
+  // display: inline-block;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+.p-header__hamburger-btn span:nth-of-type(1) {
+  top: 0;
+}
+.p-header__hamburger-btn span:nth-of-type(2) {
+  top: 9px;
+}
+.p-header__hamburger-btn span:nth-of-type(3) {
+  bottom: 0;
+}
+
+
+.p-header__hamburger-btn.open span:nth-of-type(1) {
+  -webkit-transform: translateY(9px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
+}
+.p-header__hamburger-btn.open span:nth-of-type(2) {
+  opacity: 0;
+}
+.p-header__hamburger-btn.open span:nth-of-type(3) {
+  -webkit-transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
+
+
+// 適用箇所”js-header”
+.js-header.header--background {
+  background-color: $white;
+  transition: background-color 0.4s ease-out;
+}
+
+
+
+
+
+.p-header__nav.open {
+  display: block;
+  background-color: orange;
+  opacity: 1;
+  transition: 0.3s;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-header__nav.open ul{
+  text-align: center;
+}
